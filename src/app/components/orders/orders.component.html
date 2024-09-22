@@ -1,0 +1,23 @@
+<div class="mt-4">
+    <h1>Siparişlerim</h1>
+</div>
+
+<div class="mt-4">
+    <div class="row">
+        <div class="col-md-10 col-12">
+            <!--Buraya data grid eklenecek ve sepette olan ürünlerin listelemesi yapılacak-->
+            <ul class="list-group list-group-numbered">
+                @for (item of orders(); track item.id) {
+                <li class="list-group-item d-flex">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">
+                            {{item.productName}}
+                            <span class="badge text-bg-primary rounded-pill">{{item.quantity}}</span>
+                        </div>
+                    </div>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

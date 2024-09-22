@@ -1,0 +1,26 @@
+<div class="mt-4">
+    <h1>Ana Sayfa</h1>
+</div>
+
+<div class="mt-4">
+
+    <div class="row">
+
+        @for (product of products(); track product.id) {
+        <div class="col-md-4 col-12 mt-1">
+            <div class="card">
+                <div class="card-header text-center">
+                    <img src="https://weepay.co/blog/wp-content/uploads/2020/08/Ba%C5%9Fkalar%C4%B1n%C4%B1n-Foto%C4%9Fraflar%C4%B1n%C4%B1-Kullanmay%C4%B1n.jpg"
+                        style="width: 90%;">
+                </div>
+                <div class="card-body text-center">
+                    <h3>{{product.name}}</h3>
+                    <p>Stock Adedi: {{product.stock}}</p>
+                    <p>Fiyat: {{product.price}}</p>
+                    <button (click)="addShoppingCart(product)" class="btn btn-success w-100 m-1">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
